@@ -1,5 +1,17 @@
-# SSL formats
+#!/bin/bash
 
-openssl req -newkey rsa:2048 -keyout [key-name].key -out [request-name].csr
+# This script is intended for a SSL certificates delivery pipeline
 
-openssl pkcs12 -export -out [domain-name].pfx -inkey [domain-name].key -in [domain-name].crt -certfile bundle.[domain-name].crt
+# Decompress CA file
+unzip *.zip
+# Read file names
+
+# Set variables
+
+ # Concatante on a single file
+cat ba256bfc8f0bcfec.crt gd_bundle-g2-g1.crt betheritage.eu.key > 2024.wildcard.betheritage.eu.crt
+
+# Convert certificate to PKCS12/PFX
+openssl pkcs12 -export -out 2024.wildcard.betheritage.eu.pfx -inkey betheritage.eu.key -in ba256bfc8f0bcfec.crt # -certfile bundle.[domain-name].crt
+
+exit 0
