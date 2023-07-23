@@ -1,17 +1,26 @@
 #!/bin/bash
 
-# This script is intended for a SSL certificates delivery pipeline
+# This script was designed for a SSL certificates delivery pipeline
 
-# Decompress CA file
-unzip *.zip
 # Read file names
 
 # Set variables
+year="date +%Y"
+dname="domain-name"
+csrfile="domain-name.csr"
+keyfile="domain-name.key"
+crtfile="ba256bfc8f0bcfec.crt"
+bdlfile="gd_bundle-g2-g1.crt"
+pfxfile=("$year + '.' + $dname + '.pfx'")
+wdcfile=("$year + '.' + $dname + '.crt'")
 
- # Concatante on a single file
-cat ba256bfc8f0bcfec.crt gd_bundle-g2-g1.crt [domain-name].eu.key > 2024.wildcard.[domain-name].eu.crt
+# Decompress CA file
+unzip *.zip
+
+# Concatante on a single file
+cat $crtfile $bdlfile $keyfiley >  $wdcfile
 
 # Convert certificate to PKCS12/PFX
-openssl pkcs12 -export -out 2024.wildcard.[domain-name].eu.pfx -inkey [domain-name].eu.key -in ba256bfc8f0bcfec.crt # -certfile bundle.[domain-name].crt
+openssl pkcs12 -export -out $pfxfile -inkey $keyfile -in wdcfile -certfile $bdlfile
 
-exit 0
+# exit0
