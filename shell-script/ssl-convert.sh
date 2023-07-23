@@ -11,8 +11,8 @@ csrfile="domain-name.csr"
 keyfile="domain-name.key"
 crtfile="ba256bfc8f0bcfec.crt"
 bdlfile="gd_bundle-g2-g1.crt"
-pfxfile=("$year + '.' + $dname + '.pfx'")
-wdcfile=("$year + '.' + $dname + '.crt'")
+pfxfile="${year}.${dname}.pfx"
+wdcfile="${year}.${dname}.crt"
 
 # Decompress CA file
 unzip *.zip
