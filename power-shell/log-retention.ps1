@@ -1,5 +1,7 @@
 # This script was tested deleting web server multiple files
 # Set the root directory where the search will begin
+# Check the PS execution policy: "Get-Executionpolicy", if "Restricted" issue "Set-Executionpolicy Unrestricted".
+
 $rootDirectory = "C:\inetpub\logs"
 
 # Function to recursively delete *.log files in subdirectories
