@@ -30,4 +30,16 @@ sudo apt -y install php7.4
 # Install the desired version of PHP-FPM
 sudo apt -y install php7.4-fpm
 
+# This command will install the following modules:
+php7.4-cli - command interpreter, useful for testing PHP scripts from a shell or performing general shell scripting tasks
+php7.4-json - for working with JSON data
+php7.4-common - documentation, examples, and common modules for PHP
+php7.4-mysql - for working with MySQL databases
+php7.4-zip - for working with compressed files
+php7.4-gd - for working with images
+php7.4-mbstring - used to manage non-ASCII strings
+php7.4-curl - lets you make HTTP requests in PHP
+php7.4-xml - for working with XML data
+php7.4-bcmath - used when working with precision floats
+
 exit 0
