@@ -6,4 +6,4 @@ smbclient '//destination/folder' -U "DOMAINNAME\username" -c "put backup_2023100
 
 smbclient '//xxx.xxx.xxx.xxx/tmp' -U Administrator -c "put /home/user/notes.txt home-folder-user" -m SMB3
 
-smbclient '%smbPath%' '%smbPassword%' -W %domain% -U %smbUser% -c 'prompt OFF; recurse OFF; cd %smbSource%; lcd tomcat/conf; mget *'
+smbclient '\\server\share' -N -c 'prompt OFF;recurse ON;cd 'path\to\directory\';lcd '~/path/to/download/to/';mget *'`
