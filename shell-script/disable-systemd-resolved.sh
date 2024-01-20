@@ -5,8 +5,8 @@
 # Stages
 
 # Disable and stop the systemd-resolved service:
-sudo systemctl disable systemd-resolved.service
-sudo systemctl stop systemd-resolved
+sudo systemctl stop resolvconf.service
+sudo systemctl disable resolvconf.service
 
 # Then put the following line in the `[main]` section of your `/etc/NetworkManager/NetworkManager.conf`:
 dns=default
