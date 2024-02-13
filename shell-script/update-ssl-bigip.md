@@ -12,7 +12,7 @@
 
 - Delete three entries for the old certificate:
 
-*Common*
+*Cert*
 `
 }
 sys file ssl-cert /Common/\*.domain. {
