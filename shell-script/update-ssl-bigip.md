@@ -13,6 +13,7 @@
 - Delete three entries for the old certificate:
 
 *Cert*
+
 `
 }
 sys file ssl-cert /Common/\*.domain. {
@@ -21,6 +22,7 @@ sys file ssl-cert /Common/\*.domain. {
 `
 
 *CSR*
+
 `
 }
 sys file ssl-csr /Common/\*.domain. {
@@ -30,6 +32,7 @@ sys file ssl-csr /Common/\*.domain. {
 `  
 
 *Key*
+
 `
 }
 sys file ssl-key /Common/\*.domain. {
@@ -37,6 +40,7 @@ sys file ssl-key /Common/\*.domain. {
     revision 1
     source-path /var/run/key_mgmt/aVX2s6/ssl.key/*.domain.
 `
+
 ## Verify configuration
 
 - Run on SSH terminal, `tmsh load sysconfig verify`
@@ -52,7 +56,35 @@ sys file ssl-key /Common/\*.domain. {
 ## Remove temporary configuration
 
 - Delete three entries for the temporary certificate:
-`sys file ssl-key /Common/\t.domain`.
+
+*Cert*
+
+`
+}
+sys file ssl-cert /Common/\t.domain. {
+    cache-path /config/filestore/files_d/Common_d/certificate_d/:Common:t.domain._70369_1
+    revision 1
+`
+
+*CSR*
+
+`
+}
+sys file ssl-csr /Common/\t.domain. {
+    cache-path /config/filestore/files_d/Common_d/certificate_signing_request_d/:Common:t.domain._70364_1
+    revision 1
+    source-path /config/ssl/ssl.csr/t.domain.
+`  
+
+*Key*
+
+`
+}
+sys file ssl-key /Common/\t.domain. {
+    cache-path /config/filestore/files_d/Common_d/certificate_key_d/:Common:t.domain._70360_1
+    revision 1
+    source-path /var/run/key_mgmt/aVX2s6/ssl.key/t.domain.
+`
 
 ## Apply configuration
 
