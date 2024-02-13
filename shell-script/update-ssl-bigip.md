@@ -44,6 +44,8 @@ sys file ssl-key /Common/\*.domain. {
 ## Verify configuration
 
 - Run on SSH terminal, `tmsh load sysconfig verify`
+- Run on SSH terminal, `tmsh load sysconfig`
+- Check site: `https://domian.`
 
 ## Create new SSL
 
@@ -90,4 +92,4 @@ sys file ssl-key /Common/\t.domain. {
 
 - Run on SSH terminal, `tmsh load sysconfig verify`, if OK
 - Run on SSH terminal, `tmsh load sysconfig`
-- Check site: `https://domian`.
+- Check site: `https://domian.`
