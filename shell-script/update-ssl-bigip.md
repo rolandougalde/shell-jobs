@@ -52,10 +52,10 @@ sys file ssl-key /Common/\*.domain. {
 ## Remove temporary configuration
 
 - Delete three entries for the temporary certificate:
-`sys file ssl-key /Common/\t.domain.
+`sys file ssl-key /Common/\t.domain`.
 
 ## Apply configuration
 
 - Run on SSH terminal, `tmsh load sysconfig verify`, if OK
 - Run on SSH terminal, `tmsh load sysconfig`
-- Check site: https://domian.
+- Check site: `https://domian`.
