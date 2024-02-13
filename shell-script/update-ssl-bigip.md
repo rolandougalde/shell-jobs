@@ -6,7 +6,7 @@
 - Import a previous compilated SSL file, containing the `CRT` and `Chain`.
 - Import the `Private Key` file.
 - On F5 SSL profiles, look for the  `*.domain` and point `CRT`, `Key` and `Chain` to `t.domain.`.
-- SSH on F5 stand by server, edit, `/config/bigip.conf`
+- SSH on F5 stand by server, edit `/config/bigip.conf`
 
 ## Remove past configuration
 
