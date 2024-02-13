@@ -10,7 +10,7 @@
 
 ## Remove past configuration
 
-- Delete three entries for the old certificate:
+- Delete three entries related to the old certificate:
 
 *Cert*
 
