@@ -2,7 +2,7 @@
 
 ## Create a temporary certificate
 
-- Under `System` create a new certificate named as `t.domain.`.
+- Under `System web interface` create a new certificate named as `t.domain.`.
 - Import a previous compilated SSL file, containing the `CRT` and `Chain`.
 - Import the `Private Key` file.
 - On F5 SSL profiles, look for the  `*.domain` and point `CRT`, `Key` and `Chain` to `t.domain.`.
