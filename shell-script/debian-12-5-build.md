@@ -36,7 +36,7 @@ apt upgrade
 # show available PHP 7.4 packages
 apt-cache search php7.4
 
-# PHP 8.2 installation
+# PHP 7.4 installation
 
 $ apt install php7.4
 $ apt install php7.4-mysql
@@ -45,7 +45,6 @@ $ apt install php7.4-dom
 $ apt install php7.4-mbstring
 $ apt install php7.4-imagick
 $ apt install php7.4-zip
-
 
 # install PHP 7.4 fpm or apache2 mod as needed
 #
