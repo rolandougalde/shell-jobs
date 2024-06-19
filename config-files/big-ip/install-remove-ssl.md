@@ -10,6 +10,8 @@
 
 ## Remove past configuration
 
+- Fisrt check Local Traffic > Profiles > SSL, then remove cerificate associations.
+- Look for the right configuration lines, "ssl-cert", "ssl-csr" and "ssl-key".
 - Delete three entries related to the old certificate:
 
 *Cert*
