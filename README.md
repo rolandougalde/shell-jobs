@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="assets/css/cs50-for-md.css">
+
 # Shell - Jobs
 *Very basic code instructions to work with legacy systems in a simple way..*
 
