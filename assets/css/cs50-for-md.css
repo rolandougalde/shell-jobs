@@ -1,0 +1,146 @@
+/* CS50 Course Notes-like CSS for Markdown */
+
+/* Base font and background */
+body {
+  font-family: Verdana, sans-serif;
+  background-color: #212529;
+  color: #dee2e6;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, sans-serif;
+  color: inherit;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+/* Paragraphs */
+p {
+  margin: 1em 0;
+}
+
+strong {
+  color: #a5d6ff;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid #a5d6ff;
+  color: #dee2e6;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  background-color: #0d1117;
+  font-style: normal;
+}
+
+/* Code blocks */
+pre {
+  background-color: #0d1117;
+  padding: 1em;
+  border-radius: 5px;
+  overflow: auto;
+  margin-bottom: 1em;
+  line-height: 1.45;
+  font-family: Lucida Console, monospace;
+  font-size: 85%;
+  color: #dee2e6;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #0d1117;
+  padding: 0.2em 0.4em;
+  border-radius: 5px;
+  font-size: 85%;
+  color: #7ee787;
+}
+
+pre code {
+  font-family: monospace;
+  border: none;
+  background: none;
+  font-size: 100%;
+  line-height: 1em;
+  letter-spacing: normal;
+  word-break: break-all;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+
+ul li, ol li {
+  margin-bottom: 0.5em;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #ef9aa4;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ef9aa4
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid #f0883e;
+  margin: 2em 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+th, td {
+  border: 1px solid #dee2e6;
+  padding: 0.75em;
+  text-align: left;
+}
+
+th {
+  background-color: #212529;
+  color: #d2a8ff;
+}
