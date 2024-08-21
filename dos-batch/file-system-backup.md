@@ -1,10 +1,12 @@
 # File system backup
 
-```bash
+This is DOS bacth script, that uses 7zip, for an *open-file* backup.
+
+```batch
 @echo off
 echo .:Accounting - File Backup:.
 echo Modified: 2024-08-21 - By Rolo.
-echo ServerName: Poseidon
+echo ServerName: [server]
 echo Archives accounting files and move them to the NAS.
 echo.
 echo    ___   ___
@@ -45,7 +47,7 @@ set "SOURCE=D:\Accounting\"
 set "DESTINATION=D:\backup\accounting-fs-%YYYY%-%MM%-%DD%-%HH%-%MIN%"
 set "LOGFILE=logs\log-%YYYY%-%MM%-%DD%-%HH%-%MIN%.txt"
 set "TARFILE=D:\backup\*.tar"
-set "NAS=\\kush\Backup\Accounting\"
+set "NAS=\\nas\Backup\Accounting\"
 REM Create the zip archive
 "%SEVENZIP%" a -ttar -ssw -bb3 "%DESTINATION%" "%SOURCE%" >"%LOGFILE%" 2>&1
 
