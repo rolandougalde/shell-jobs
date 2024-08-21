@@ -4,6 +4,8 @@ This is DOS bacth script, that uses 7zip, for an *open-file* backup.
 
 ```batch
 @echo off
+REM Change the text color to light yellow on a black background
+color 0E
 echo .:Accounting - File Backup:.
 echo Modified: 2024-08-21 - By Rolo.
 echo ServerName: [server]
