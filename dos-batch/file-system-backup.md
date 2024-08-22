@@ -11,20 +11,22 @@ echo Modified: 2024-08-21 - By Rolo.
 echo ServerName: [server]
 echo Archives accounting files and move them to the NAS.
 echo.
-echo    ___   ___
-echo   /  _   _  \
-echo     / ^\ / ^\
-echo    ^|   ^|   ^|    ^|\
-echo    ^|O  ^|O  ^|___/  ^\     ++
-echo     \_/ \_/    \   ^| ++
-echo   _/      __    \  \
-echo  (________/ __   ^|_/
-echo   (___      /   ^|    ^|\
-echo     \     \^|    ^|___/  ^|
-echo      \_________      _/   ++++
-echo   ++           \    ^|
-echo           ++   ^|   /  +++
-echo             ++ /__/
+echo            ^
+echo         //                        ___   ___
+echo       (*)     "O"                /  _   _  \
+echo      (*)                           / ^\ / ^\
+echo     (*)    "O"                    ^|   ^|   ^|    ^|\
+echo    //                             ^|O  ^|O  ^|___/  ^\     ++
+echo   //                               \_/ \_/    \   ^| ++
+echo  //                              _/      __    \  \
+echo  /     /^|   /\                  (________/ __   ^|_/
+echo       / ^|  ^|  ^|                   (___      /   ^|    ^|\
+echo      / /  /   ^|                     \     \^|    ^|___/  ^|
+echo     ^|  ^| ^|   /                       \_________      _/   ++++
+echo    /   ^| ^|  ^|                      ++           \    ^|
+echo   ^|   / /   ^|                              ++   ^|   /  +++
+echo  /   /  ^|   ^|                               ++ /__/
+echo ~~~ ~~~~   ~~~~~~~~~~~~  ~~~~~~~~~~~~~  ~~~~        ~~+++~~~~ ~
 echo.
 REM Display the current time
 
