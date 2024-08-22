@@ -1,4 +1,4 @@
-MS-DOS Batch colors
+# MS-DOS Batch colors
 
 In a DOS batch file, you can change the color of the text displayed in the command prompt using the color command. 
 The color command takes two hexadecimal digits: the first digit is for the background color, and the second is for the text color.
