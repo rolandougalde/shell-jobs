@@ -48,7 +48,7 @@ F = Bright White
 The first example in the script uses 0A, which sets the background to black (0) and the text to light green (A). 
 The second example changes the background to blue (1) and the text to bright white (F).
 
-**Notes:**
+### Notes:
 
 The color command only affects the text and background within the command prompt session where the batch file is running.
 If you want to reset to the default colors, you can use color without any parameters, or color 07 (default).
