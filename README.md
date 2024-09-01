@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="https://github.com/rolandougalde/shell-jobs/blob/main/assets/css/cs50-for-md.css">
 
-# Project: Sell Jobs :shell:
+# Project: Shell-Jobs :shell:
 
 ## Overview
 
