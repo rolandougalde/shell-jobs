@@ -7,7 +7,7 @@ import logging
 def backup_folder(src_folder, dest_folder):
     # Get the current date and time for the archive name
     now = datetime.datetime.now()
-    archive_name = now.strftime("%Y-%m-%d-%H-%M") + ".tar.gz"
+    archive_name = now.strftime("backup_code-%Y_%m_%d_%H_%M") + ".tar.gz"
     archive_path = os.path.join(dest_folder, archive_name)
 
     # Create the tar.gz archive
