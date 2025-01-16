@@ -401,8 +401,50 @@ $ sudo service nginx restart
 http://app.example.com
 ```
 
+## Generate Trusted SSL Certificates
 
+Nginx delivers web applications on your server using the insecure HTTP port `80` by default. SSL certificates enable 
+encryption of network connections between a user's web browser and your web server using HTTPS. Follow the steps below 
+to generate trusted Let's Encrypt SSL certificates and enable encrypted HTTPS connections on your server
 
+1.Install the Certbot Let's Encrypt client plugin for Nginx.
+```bash
+$ sudo pkg install py39-certbot py39-certbot-nginx
+```
+
+2.Generate a new SSL certificate for your domain. Replace `app.example.com` with your actual domain and 
+`admin@example.com` with your active email address.
+```bash
+$ sudo certbot --nginx -d app.example.com -m admin@example.com --agree-tos
+```
+
+3.Restart the Nginx web server to apply the SSL configuration changes.
+```bash
+$ sudo service nginx restart
+```
+
+4.Access your domain using the HTTPS scheme in a new web browser window and verify that your PHP web application loads 
+correctly.
+```pre
+https://app.example.com
+```
+
+## Conclusion
+
+You have installed Nginx, MySQL, and PHP (FEMP stack) on your FreeBSD server and set up a sample web application to 
+deliver dynamic web content on your server. You can use the FEMP stack to securely develop and deliver 
+high-performance web applications on your server using virtual host configurations. For more information and c
+onfiguration options for each application in the stack, please visit the following documentation resources:
+
+Nginx
+MySQL
+PHP
+
+---
+
+## Credits:
+
+https://docs.vultr.com/how-to-install-nginx-mysql-php-femp-stack-on-freebsd-14-0
 
 
 
