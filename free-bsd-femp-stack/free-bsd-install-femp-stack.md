@@ -105,3 +105,98 @@ mysql is running as pid 4044.
 mysql_secure_installation
 ```
 
+Reply to the following MySQL prompts with your desired selection to set up authentication and disable insecure 
+defaults on your server.
+
+- **VALIDATE PASSWORD component**: Enter `Y` and press `Enter` to enable password verification on the server.
+- **Password Validation Policy**: Enter `2` to require strong passwords for all database users.
+- **New password**: Enter a new strong password to assign the`root` database user.
+- **Re-enter new password**: Repeat the new `root` database user password.
+- **Do you wish to continue with the password provided?**: Enter `Y` to save the new database user password.
+- **Remove anonymous users?**: Enter `Y` to remove anonymous users on the server.
+- **Disallow root login remotely?**: Enter `Y` to disable remote access to the `root` database user account.
+- **Remove test database and access to it?**: Enter `Y` to delete all test databases.
+-- **Reload privilege tables now?**: Enter `Y` to refresh the MySQL privileges table.
+
+7.Restart the MySQL database server to apply your configuration changes.
+```bash
+service mysql-server restart
+```
+
+## Install PHP and Configure PHP-FPM
+
+PHP is available in the default repositories on your FreeBSD server and includes the PHP-FPM package that manages 
+connections to the PHP service. Follow the steps below to install the latest PHP version and configure PHP-FPM on your 
+server.
+
+1.Search all available PHP packages in the FreeBSD `pkg` catalog.
+```bash
+sudo pkg search ^php[0-9]
+```
+
+2.Install the latest PHP version and PHP-FPM. For example, PHP version `8.3`.
+```bash
+pkg install -y php83
+```
+
+3.View the installed PHP version on your server.
+```bash
+$ php -v
+```
+
+Output:
+```pre
+PHP 8.3.8 (cli) (built: Jul  6 2024 01:55:02) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.3.8, Copyright (c) Zend Technologies
+```
+
+4.Enable PHP-FPM to automatically start at boot time.
+```yaml
+sysrc php_fpm_enable=yes
+```
+
+5.Start the PHP-FPM service.
+```yaml
+service php-fpm start
+```
+
+6.View the PHP-FPM and verify that it's running.
+```yaml
+$ sudo service php-fpm status
+```
+
+Output:
+```pre
+php_fpm is running as pid 8688.
+```
+
+7.Install common PHP modules required by most web applications.
+```yaml
+pkg install php83-mysqli php83-curl php83-gd php83-intl php83-mbstring php83-xml php83-zip
+```
+
+8.Open the default PHP-FPM pool configuration `www.conf` using a text editor such as `vi`.
+```yaml
+vi /usr/local/etc/php-fpm.d # nano www.conf
+```
+
+Find the following user and group directives.
+```yaml
+user = www
+group = www
+```
+
+Find the following listen directive and verify that it's set to the localhost address `127.0.0.1`.
+```yaml
+listen = 127.0.0.1:9000
+```
+
+Modify your PHP-FPM memory configurations to match your FreeBSD server memory needs.
+
+Save and close the file.
+
+9.Restart the PHP-FPM service to apply your configuration changes.
+```yaml
+service php-fpm restart
+```
