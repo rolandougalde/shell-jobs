@@ -1,2 +1,16 @@
-# Sync websites content every 10 minutes
-*/10 * * * * /usr/bin/rsync -az --delete /var/www/ [user-name]@[server-name]:/var/www/ && /usr/bin/rsync -az --delete /var/www/ [user-name]@[server-name]:/var/www/
+#!/bin/bash
+
+# Define source and destination
+SOURCE="/var/www/website/"
+DESTINATION="user@server:/var/www/website/"
+
+# Execute rsync with options
+/usr/bin/rsync -azv --delete "$SOURCE" "$DESTINATION"
+
+# Exit status handling
+if [ $? -eq 0 ]; then
+    echo "Sync completed successfully!"
+else
+    echo "Sync encountered an error."
+fi
+
