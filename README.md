@@ -2,6 +2,8 @@
 
 # Project: Shell-Jobs :shell:
 
+Hello everyone!, this project will be moved to Gitlab soon.
+
 ## Overview
 
 This project contains a collection of small, individual scripts written in various programming languages. Each script is designed to perform basic backup tasks. These tasks include backing up file systems, synchronizing folders, and backing up databases such as MySQL or MongoDB. The scripts utilize compression techniques (such as `tar.gz` or `7zip`) and create backups with date-descriptive filenames. Each script also logs the details of the backup operations to a text log.
