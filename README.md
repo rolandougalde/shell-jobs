@@ -2,7 +2,7 @@
 
 # Project: Shell-Jobs :shell:
 
-Hello everyone!, this project will be moved to Gitlab soon.
+Hello everyone!, this project will be cloned to Gitlab soon.
 
 ## Overview
 
