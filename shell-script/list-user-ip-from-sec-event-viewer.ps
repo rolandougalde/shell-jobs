@@ -1,0 +1,10 @@
+# Define the list of usernames to filter
+$users = @("user1", "user2")  # Replace with your usernames
+ # Fetch the 1000 most recent 4624 logon events and filter by username
+Get-EventLog -LogName Security -InstanceId 4624 -Newest 1000 | Where-Object {
+    $data = $_.ReplacementStrings
+    $users -contains $data[5]  # Target username
+} | Select-Object TimeGenerated,
+    @{Name="User"; Expression={$_.ReplacementStrings[5]}},
+    @{Name="IP Address"; Expression={$_.ReplacementStrings[18]}},
+    Message
