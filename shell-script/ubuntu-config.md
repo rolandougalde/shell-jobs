@@ -61,12 +61,13 @@ apt-get remove --purge linux-firmware # Check
 apt-get remove --purge motd-news-config
 apt-get remove --purge thermald
 apt-get remove --purge fail2ban
-
 apt remove --purge linux-image-generic
 apt-get install linux-virtual	
 apt install sysstat
 apt install swapspace
 apt-get dist-upgrade
+apt-get autoremove
+apt-get clean
 ```
 
 ## Add user to  sudoers group
