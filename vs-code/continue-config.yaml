@@ -1,0 +1,35 @@
+name: My Config
+version: 0.0.1
+schema: v1
+
+models:
+  - name: qwen2.5-coder:7b
+    provider: ollama
+    model: qwen2.5-coder:7b
+    apiBase: http://localhost:11434
+    roles:      
+      - autocomplete
+      - chat
+      - edit
+      - apply
+      - embed
+      - rerank
+
+  - name: gemma4:e2b
+    provider: ollama
+    model: gemma4:e2b
+    apiBase: http://localhost:11434
+    roles:      
+      - autocomplete
+      - edit
+      - chat
+      - apply
+      - embed
+      - rerank
+
+tabAutocompleteModel:
+  name: qwen2.5-coder:7b
+  provider: ollama
+  model: qwen2.5-coder:7b
+  apiBase: http://localhost:11434
+
