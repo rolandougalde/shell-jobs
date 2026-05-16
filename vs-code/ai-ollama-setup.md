@@ -1,3 +1,4 @@
+```yaml
 name: My Config
 version: 0.0.1
 schema: v1
@@ -35,6 +36,7 @@ applyModel:
 # If you want to use your Ollama LLM as a reranker, define it like this:
 rerankModel:
   name: cryptidbleh/gemma4-claude-sonnet-4.6:latest
+```
   provider: ollama
   model: cryptidbleh/gemma4-claude-sonnet-4.6:latest
   apiBase: http://localhost:11434
