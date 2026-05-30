@@ -3,33 +3,41 @@ version: 0.0.1
 schema: v1
 
 models:
-  - name: qwen2.5-coder:7b
-    provider: ollama
-    model: qwen2.5-coder:7b
-    apiBase: http://localhost:11434
+  - name: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
+    provider: llama.cpp
+    model: negentropy-opus
+    apiBase: http://localhost:10000/
     roles:      
       - autocomplete
       - chat
       - edit
       - apply
-      - embed
-      - rerank
-
-  - name: gemma4:e2b
-    provider: ollama
-    model: gemma4:e2b
-    apiBase: http://localhost:11434
-    roles:      
-      - autocomplete
-      - edit
-      - chat
-      - apply
-      - embed
       - rerank
 
 tabAutocompleteModel:
-  name: qwen2.5-coder:7b
-  provider: ollama
-  model: qwen2.5-coder:7b
-  apiBase: http://localhost:11434
+  name: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
+  provider: llama.cpp
+  model: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
+  apiBase: http://localhost:8080
 
+# --- Added Configuration for Edit, Apply, and Rerank ---
+
+editModel:
+  name: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
+  provider: llama.cpp
+  model: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
+  apiBase: http://localhost:8080
+
+applyModel:
+  name: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
+  provider: llama.cpp
+  model: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
+  apiBase: http://localhost:8080
+
+# Note: Ollama doesn't natively support traditional reranking models (like Cohere).
+# If you want to use your Ollama LLM as a reranker, define it like this:
+rerankModel:
+  name: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
+  provider: llama.cpp
+  model: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
+  apiBase: http://localhost:8080
