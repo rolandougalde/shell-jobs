@@ -1,3 +1,8 @@
+# Ollama Continue Ext. Config.
+
+.continue > config.yaml
+
+```yaml
 name: My Config
 version: 0.0.1
 schema: v1
@@ -50,3 +55,4 @@ applyModel:
 # If you want to use your Ollama LLM as a reranker, define it like this:
 rerankModel:
   name: gemma4:e4b
+```
