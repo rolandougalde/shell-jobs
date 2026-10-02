@@ -1,43 +1,28 @@
+# This example you can switch between 2 LLM's on VS Continue Chat
+
 name: My Config
 version: 0.0.1
 schema: v1
 
 models:
-  - name: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
-    provider: llama.cpp
-    model: negentropy-opus
-    apiBase: http://localhost:10000/
+  - name: gemma4:e4b
+    model: gemma4:e4b
+    provider: ollama 
+    apiBase: http://localhost:11434
     roles:      
-      - autocomplete
       - chat
+      - autocomplete
+      - edit
+      - apply
+      - rerank   
+  - name: qwen3.5:4b
+    model: qwen3.5:4b
+    provider: ollama
+    apiBase: http://localhost:11434
+    roles:      
+      - chat
+      - autocomplete
       - edit
       - apply
       - rerank
-
-tabAutocompleteModel:
-  name: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
-  provider: llama.cpp
-  model: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
-  apiBase: http://localhost:8080
-
-# --- Added Configuration for Edit, Apply, and Rerank ---
-
-editModel:
-  name: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
-  provider: llama.cpp
-  model: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
-  apiBase: http://localhost:8080
-
-applyModel:
-  name: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
-  provider: llama.cpp
-  model: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
-  apiBase: http://localhost:8080
-
-# Note: Ollama doesn't natively support traditional reranking models (like Cohere).
-# If you want to use your Ollama LLM as a reranker, define it like this:
-rerankModel:
-  name: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
-  provider: llama.cpp
-  model: Jackrong/Negentropy-claude-opus-4.7-9B-GGUF
-  apiBase: http://localhost:8080
+# End of file.
