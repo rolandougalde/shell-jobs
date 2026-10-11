@@ -1,6 +1,6 @@
 # Continue extension config
 
-```json
+```yaml
 name: My Config
 version: 0.0.1
 schema: v1
