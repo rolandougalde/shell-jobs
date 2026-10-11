@@ -1,3 +1,6 @@
+# Continue extension config
+
+```json
 name: My Config
 version: 0.0.1
 schema: v1
@@ -42,3 +45,4 @@ applyModel:
 # Note: Ollama doesn't natively support traditional reranking models (like Cohere).
 # If you want to use your Ollama LLM as a reranker, define it like this:
 rerankModel:
+```
