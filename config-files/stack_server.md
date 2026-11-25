@@ -3,7 +3,7 @@
 ## General settings
 
 > - *VCenter:* 02
-> - *Host:* Buddha
+> - *Host:* Test
 > - *Server name:* GATEKEEPER-01
 > - *IP:* 192.168.101.253
 
